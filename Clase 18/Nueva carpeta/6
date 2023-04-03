@@ -1,0 +1,30 @@
+//Crear una función que devuelva la diferencia que hay entre el valor más chico de un arreglo y
+//su valor más grande.
+
+Algoritmo sin_titulo
+	
+	Definir vector, min Como Entero
+	Dimension vector(4)
+	
+	Escribir numMaximo(vector,4)
+FinAlgoritmo
+
+
+Funcion diferencia = numMaximo(v,n)
+	Definir max, i, min, diferencia, num Como Entero
+	max = 0
+	min = 9999999
+	Para i = 0 Hasta n-1 Hacer
+		Leer num
+		v(i)=num
+		Si v(i) > max Entonces
+			max = v(i)
+		FinSi
+		Si v(i) < min Entonces
+			min = v(i)
+		FinSi
+	FinPara
+	
+	diferencia = max - min
+FinFuncion
+

@@ -1,0 +1,50 @@
+Algoritmo sin_titulo
+	
+	Definir administrador, actualizacion Como Logico
+	Definir email, correoDeVoz, emergencia Como Entero
+	Definir admin Como Caracter
+	
+	Escribir "¿Desea ingresar como administrador? si/no"
+	Leer admin
+	admin = Minusculas(admin)
+	
+	Si admin == "si" Entonces
+		administrador = Verdadero
+	SiNo
+		administrador = Falso
+	FinSi
+	
+	Si administrador Entonces
+		Escribir "Completar la hoja de calculo"
+		Escribir "Revisar correo electronico"
+		Escribir "¿Cuantos correos electronicos hay?"
+		Leer email
+		Si email >= 10 Entonces
+			Escribir "Todos los correos electronicos revisados"			
+		FinSi
+		Escribir "Cuantos correo de voz"
+		Leer correoDeVoz
+		Escribir "¿Cuantos correo de emergencia?"
+		Leer emergencia
+		Si emergencia > 0 Entonces
+			Escribir "Correo de emergencia revisado en primer lugar"
+		FinSi
+		Escribir "Todos los correos de voz de los ejecutivos revisados"
+		Si email < 10 Entonces
+			Escribir "Todos los correos electronicos revisados por último"
+		FinSi
+		actualizacion = Verdadero
+	SiNo
+		Escribir "Debe haber ingresado como administrador para realizar alguna actualizacion"
+		actualizacion = Falso
+	FinSi
+	
+	Si actualizacion Entonces
+		Escribir "E-mail de actualizacion enviado"
+	SiNo
+		Escribir "No se actualizo nada"
+	FinSi
+	
+	Escribir "Apagar Pc"
+	Escribir "Regar la planta"
+FinAlgoritmo

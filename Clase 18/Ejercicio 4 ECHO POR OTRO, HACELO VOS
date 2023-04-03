@@ -1,0 +1,97 @@
+Algoritmo sin_titulo
+	definir x, vA,vB,vC,vD,vE,vF como entero
+	escribir "de cuantas casillas deseas que tenga cada vector"
+	leer x
+	Dimension vA(x),vB(x),vC(x)
+	menu(va,vb,vc,x)
+	Escribir "Gracias por usar este programa"
+FinAlgoritmo
+
+SubProceso lva (vA Por Referencia,x Por Referencia)
+	definir i como entero
+	para i=0 hasta x-1 Hacer
+		vA(i)=Aleatorio(-100,100)
+	FinPara
+	para i=0 hasta x-1 Hacer
+		escribir vA(i)
+	FinPara
+FinSubProceso
+
+SubProceso lvb(vB Por Referencia,x Por Referencia)
+	definir i Como Entero
+	para i=0 hasta x-1 Hacer
+		vB(i)=Aleatorio(-100,100)
+	FinPara
+	para i=0 hasta x-1 Hacer
+		escribir vB(i)
+	FinPara
+FinSubProceso
+
+SubProceso lvc(vB,x,vA,vC Por Referencia)
+	definir i Como Entero
+	para i=0 hasta x-1 Hacer
+		vC(i)=vA(i)+vB(i)
+	FinPara
+	para i=0 hasta x-1 Hacer
+		escribir "en la posicion " i "la suma dio " vc(i)
+	FinPara
+FinSubProceso
+
+SubProceso lvd(vB,x,vA,vC Por Referencia)
+	definir i Como Entero
+	para i=0 hasta x-1 Hacer
+		vC(i)=vB(i)-vA(i)
+	FinPara
+	para i=0 hasta x-1 Hacer
+		escribir "en la posicion " i "la suma dio " vc(i)
+	FinPara
+FinSubProceso
+
+subproceso mE (vA,vB,vC,x)
+	definir i Como Entero
+	definir vector como caracter
+	escribir "que vector queres ver (solo se puede elegir el vector a , b , c)"
+	leer vector
+	hacer
+		Segun vector
+			"a":
+				para i=0 hasta x-1 Hacer
+					Escribir va(i)
+				finpara
+			"b":
+				para i=0 hasta x-1 Hacer
+					Escribir vb(i)
+				finpara
+			"c":
+				para i=0 hasta x-1 Hacer
+					Escribir vc(i)
+					finpara
+		FinSegun
+	mientras que vector <> "a" y vector <> "b" y vector <> "c"
+FinSubProceso
+
+subproceso menu(va Por Referencia,vb Por Referencia,vc Por Referencia,x)
+	definir opci Como Caracter
+	hacer
+	escribir "--------menu--------"
+	escribir "opcion a (se llenara el vector a de manera aleatoria)"
+	escribir "opcion b (se llenara el vector b de manera aleatoria)"
+	escribir "opcion c (se llenara el vector c con la sumara de las posiciones en el vector a y b"
+	escribir "opcion d (se llenara el vector c con la restara de las posiciones en el vector a y b"
+	escribir "opcion e (permitira elegir que vector quieres mostrar)"
+	escribir "opcion f (salir)"
+	leer opci
+	segun opci
+		"a":
+			lva(va,x)
+		"b":
+			lvb(vb,x)
+		"c":
+			lvc(vb,x,va,vc)
+		"d":
+			lvd(vb,x,va,vc)
+		"e":
+			me(va,vb,vc,x)
+	FinSegun
+	mientras que opci <>"f"
+FinSubProceso

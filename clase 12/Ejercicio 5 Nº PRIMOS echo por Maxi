@@ -1,0 +1,32 @@
+//Realizar una función que reciba un numero ingresado por el usuario y averigüe si el número es
+//primo o no. Un número es primo cuando es divisible sólo por 1 y por sí mismo, por ejemplo: 2,
+//3, 5, 7, 11, 13, 17, etc. Nota: recordar el uso del MOD.
+
+Algoritmo sin_titulo
+	
+	Definir num Como Entero
+	
+	Escribir "Ingrese un numero para saber si es primo o no"
+	Leer num
+	
+	primo(num)
+	
+FinAlgoritmo
+
+Funcion primo(n) 
+	Definir i, contador Como Entero
+	contador = 0
+	Si n <> 2 Entonces
+		Para i = 2 Hasta n-1 Hacer
+			Si (n MOD i == 0) Entonces
+				contador = contador + 1			
+			FinSi
+		FinPara
+	FinSi
+	
+	Si contador > 0 Entonces
+		Escribir "El " n " NO es primo"
+	SiNo
+		Escribir "El " n " ES primo"
+	FinSi
+FinFuncion

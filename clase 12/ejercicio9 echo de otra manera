@@ -1,0 +1,72 @@
+//Los empleados de una fábrica trabajan en dos turnos: Diurno y Nocturno. Se desea calcular el
+//jornal diario de acuerdo con las siguientes reglas:
+//	a) La tarifa de las horas diurnas es de $ 90
+//	b) La tarifa de las horas nocturnas es de $ 125
+//	c) En caso de ser feriado, la tarifa se incrementa en un 10% si el turno es diurno y en
+//		un 15% si el turno es nocturno.
+//			
+//		El programa debe solicitar la siguiente información al usuario: el nombre del trabajador, el día
+//			
+//			de la semana, el turno (diurno o nocturno) y la cantidad de horas trabajadas. Además, debe-
+//			mos preguntarle al usuario si el día de la semana (lunes, martes, miércoles, etc.) era festivo o
+//				
+//				no, para poder calcular el jornal diario. Utilice una función para realizar el cálculo.
+
+
+Algoritmo ejercicio9
+	definir diurno, nocturno, feriadodiu, feriadonoc, horas Como real
+	Definir nombre, dia, turno, festivo,x Como Caracter
+	
+	
+	diurno=90
+	nocturno=125
+	feriadodiu=diurno*1.10
+	feriadonoc=nocturno*1.15
+	Escribir "ingrese el nombre del trabajador"
+	leer nombre
+	Escribir "ingrese el dia de hoy"
+	leer dia
+	Escribir "ingrese las horas trabajadas"
+	leer horas
+	Escribir "ingrese el turno: diurno o nocturno "
+	leer turno
+	Escribir "es dia Festivo? responda si o no"
+
+	leer festivo
+	x=Minusculas(festivo)
+
+
+	
+	
+	jornal(nombre, dia, horas, turno, festivo)
+	
+	
+FinAlgoritmo
+Funcion jornal(nom, di, hor, tur, fes)
+	Definir jornalito, jornalito1, jornalito2, jornalito3 como real
+	
+	si fes="si" y tur="diurno" Entonces
+		jornalito= 90*1.10*hor
+		
+		Escribir "el jornal de las horas trabajadas de ", nom, " en dia festivo, turno diurno es: $ ", jornalito
+		
+	SiNo
+		si fes="si" y tur="nocturno" Entonces
+			jornalito2=125*1.15*hor
+			Escribir "el jornal de las horas trabajadas de ", nom, " en dia festivo, turno nocturno es: $ ", jornalito2
+		SiNo
+			si fes="no" y tur="diurno" Entonces
+				jornalito1= 90*hor
+				Escribir "el jornal de las horas trabajadas de ", nom, " en dia no festivo, turno diurno es: $ ", jornalito1
+			SiNo
+				Si fes="no" y tur="nocturno" Entonces
+					jornalito3=125*hor
+					Escribir "el jornal de las horas trabajadas de ", nom, " en dia no festivo, turno nocturno es: $ ", jornalito3
+					
+				FinSi
+			FinSi
+		FinSi
+		
+	FinSi
+	
+FinFuncion

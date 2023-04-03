@@ -1,0 +1,92 @@
+Algoritmo sin_titulo
+	Definir dia,mes,anio Como entero
+	Escribir "ingrese una fecha"
+	Escribir "dia"
+	leer dia
+	Escribir "mes"
+	Leer mes
+	Escribir "año"
+	Leer anio
+	Si mes>0 y mes<=12  y anio <=2023 Entonces
+		Segun mes Hacer
+			1:
+				Si dia>0 y dia <=31 Entonces
+					Escribir dia ," de enero de ",anio
+				SiNo
+					Escribir "no recorresponde a una fecha valida"
+				Fin Si
+				
+			2:
+				Si dia>0 y dia <=28 Entonces
+					Escribir dia ," de febrero de ",anio
+				SiNo
+					Escribir "no recorresponde a una fecha valida"
+				Fin Si
+				
+			3:
+				Si dia>0 y dia <=31 Entonces
+					Escribir dia ," de marzo de ",anio
+				SiNo
+					Escribir "no recorresponde a una fecha valida"
+				Fin Si
+			4:
+				Si dia>0 y dia <=30 Entonces
+					Escribir dia ," de abril de ",anio
+				SiNo
+					Escribir "no recorresponde a una fecha valida"
+				Fin Si
+			5:
+				Si dia>0 y dia <=31 Entonces
+					Escribir dia ," de mayo de ",anio
+				SiNo
+					Escribir "no recorresponde a una fecha valida"
+				Fin Si
+			6:
+				Si dia>0 y dia <=30 Entonces
+					Escribir dia ," de junio de ",anio
+				SiNo
+					Escribir "no recorresponde a una fecha valida"
+				Fin Si
+			7:
+				Si dia>0 y dia <=31 Entonces
+					Escribir dia ," de julio de ",anio
+				SiNo
+					Escribir "no recorresponde a una fecha valida"
+				Fin Si
+			8:
+				Si dia>0 y dia <=31 Entonces
+					Escribir dia ," de agosto de ",anio
+				SiNo
+					Escribir "no recorresponde a una fecha valida"
+				Fin Si
+			9:
+				Si dia>0 y dia <=30 Entonces
+					Escribir dia ," de septiembre de ",anio
+				SiNo
+					Escribir "no recorresponde a una fecha valida"
+				Fin Si
+			10:
+				Si dia>0 y dia <=31 Entonces
+					Escribir dia ," de octubre de ",anio
+				SiNo
+					Escribir "no recorresponde a una fecha valida"
+				Fin Si
+			11:
+				Si dia>0 y dia <=30 Entonces
+					Escribir dia ," de noviembre de ",anio
+				SiNo
+					Escribir "no recorresponde a una fecha valida"
+				Fin Si
+			12:
+				Si dia>0 y dia <=31  Entonces
+					Escribir dia ," de diciembre de ",anio
+				SiNo
+					Escribir "no recorresponde a una fecha valida"
+				Fin Si
+			De Otro Modo:
+				Escribir "no correcponde a una fecha valida"
+		Fin Segun
+	SiNo
+		Escribir "no correcponde a una fecha valida"
+	Fin Si
+FinAlgoritmo

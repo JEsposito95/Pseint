@@ -1,0 +1,24 @@
+//Rellenar una matriz, de 3 x 3, con una palabra de 9 de longitud, pedida por el usuario, encon-
+//trando la manera de que la frase se muestre de manera continua en la matriz.
+Algoritmo sin_titulo
+	Definir fila, columna, contadorPalabra Como Entero
+	Definir letra, matrix Como Caracter
+	Dimension matrix(3,3)
+	contadorPalabra= 0
+	Escribir "ingrese una palabra de nueve caracteres"
+	leer letra
+	
+	Para fila= 0 Hasta 2 Hacer
+		para columna=0 hasta 2 Hacer
+			matrix(fila,columna)= subcadena(letra,contadorPalabra, contadorPalabra)
+			contadorPalabra = contadorPalabra + 1
+		FinPara			
+	FinPara
+	
+	Para fila=0 hasta fila-1 Hacer
+		para columna=0 Hasta columna-1 Hacer 
+			escribir matrix(fila, columna) " " Sin Saltar
+		FinPara
+		Escribir " "
+	FinPara
+FinAlgoritmo
